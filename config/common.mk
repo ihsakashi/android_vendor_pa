@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# NEOS Vendor
+include vendor/neos/config/common.mk
+
 # ADB
 ifeq ($(TARGET_BUILD_VARIANT),user)
 # Enable ADB authentication
