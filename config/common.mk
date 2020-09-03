@@ -15,6 +15,9 @@
 # NEOS Vendor
 include vendor/neos/config/common.mk
 
+# Disable GAPPS
+TARGET_DISABLES_GAPPS := true
+
 # ADB
 ifeq ($(TARGET_BUILD_VARIANT),user)
 # Enable ADB authentication
