@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Abstruct
-PRODUCT_PACKAGES += \
-    Abstruct
-
 # AOSP Packages
 PRODUCT_PACKAGES += \
     ThemePicker
@@ -45,16 +41,8 @@ PRODUCT_PACKAGES += \
     ParanoidPapers \
     ParanoidQuickStep
 
-ifneq ($(filter RELEASE BETA,$(PA_BUILDTYPE)),)
-    PRODUCT_PACKAGES += \
-    ParanoidHub
-endif
-
 # Face Sense
-TARGET_ENABLE_FACE_SENSE := true
-
-PRODUCT_PACKAGES += \
-    ParanoidFaceSense
+TARGET_ENABLE_FACE_SENSE := false
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.face.sense_service=$(TARGET_ENABLE_FACE_SENSE)
@@ -73,10 +61,6 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libvndfwk_detect_jni.qti.vendor \
     libqti_vndfwk_detect.vendor
-
-# Retro Music Player
-PRODUCT_PACKAGES += \
-    RetroMusicPlayer
 
 # Shell
 PRODUCT_PACKAGES += \
