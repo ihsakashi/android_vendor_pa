@@ -114,6 +114,9 @@ echo -e ""
 . build/envsetup.sh
 echo -e ""
 
+# for neos
+export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true 
+
 # Use the thread count specified by user
 CMD=""
 if [ $JOBS ]; then
